@@ -1,518 +1,709 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
-    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>DORA Health & Wellbeing</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
-    <!--Cloudflare-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
-       <script src="js/jquery.min.js"></script>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DORA Health & Wellbeing – Perth's In-Home Care Specialists. Compassionate, Dignified, Personalised Support for complex disability and spinal injury care.">
+  <meta name="keywords" content="DORA, in-home care Perth, disability support, spinal injury care, NDIS, personalised healthcare Hocking">
+  <title>DORA Health & Wellbeing | Home</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js "></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js "></script>
-<![endif]-->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/DORA-Icon-32.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:    '#aa9144',
+            'gold-dk': '#8e7424',
+            warm:    '#f4f1ec',
+            beige:   '#eddba5',
+            brand:   '#1e1c18',
+          },
+          fontFamily: {
+            sans:   ['Inter', 'sans-serif'],
+            serif:  ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Brand CSS -->
+  <link href="css/dora.css" rel="stylesheet">
+  <style>
+    /* ---- Float animation ---- */
+    @keyframes floatUp {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+    .float-anim   { animation: floatUp 6s ease-in-out infinite; }
+    .float-anim-2 { animation: floatUp 7.5s ease-in-out 1s infinite; }
+    .float-anim-3 { animation: floatUp 5s ease-in-out 2.2s infinite; }
+
+    /* ---- Lotus hero pulse ---- */
+    @keyframes lotusPulse {
+      0%,100% { filter: drop-shadow(0 0 0px rgba(170,145,68,0)); transform: scale(1); }
+      50%     { filter: drop-shadow(0 0 28px rgba(170,145,68,.35)); transform: scale(1.04); }
+    }
+    .lotus-hero { animation: lotusPulse 5s ease-in-out infinite; }
+
+    /* ---- SVG stroke draw animation ---- */
+    .draw-svg path, .draw-svg circle, .draw-svg polyline,
+    .draw-svg line, .draw-svg rect, .draw-svg ellipse {
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      transition: stroke-dashoffset 3s ease 0.2s;
+    }
+    .draw-svg.drawn path, .draw-svg.drawn circle,
+    .draw-svg.drawn polyline, .draw-svg.drawn line,
+    .draw-svg.drawn rect, .draw-svg.drawn ellipse {
+      stroke-dashoffset: 0;
+    }
+    /* PNG fallback — fade in on scroll */
+    .line-art-img {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 1.4s ease 0.1s, transform 1.4s ease 0.1s;
+    }
+    .line-art-img.drawn {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ---- Section background line art overlay ---- */
+    .section-line-bg {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-line-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: 55%;
+      background-position: right center;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .section-line-bg > * { position: relative; z-index: 1; }
+    .line-bg-nurse::after   { background-image: url('images/Dora-Illustrations/dora-art-nurse.png'); }
+    .line-bg-chair::after   { background-image: url('images/Dora-Illustrations/dora-art-man-wheelchair-2.png'); }
+    .line-bg-lotus::after   { background-image: url('images/Dora-Illustrations/dora-art-lotus-freestanding.png'); background-size: 35%; background-position: center; }
+    .line-bg-walk::after    { background-image: url('images/Dora-Illustrations/dora-art-woman-walkingframe.png'); background-position: left center; }
+
+    /* Illustration wrapper bubble */
+    .illus-wrapper { position: relative; display: flex; align-items: center; justify-content: center; }
+    .illus-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 80%; height: 80%;
+      background: rgba(237,219,165,.22);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .illus-wrapper img { position: relative; z-index: 1; }
+  </style>
 </head>
-<body>
 
-<!--NAVBAR-->
-<div class="header"><div class="container"><div class="row align-items-center">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <!--Logo--><a href="index.html"> <img src="images/logo.png" alt="DORA Health Logo"></a></div>
-        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12"> <div class="navigation"><div id="navigation"><ul>
-      <!--Team--><li><a href="team.html">Our Team</a></li>
-      <!--Services-->
-      <li class="has-sub"><a href="service-detail.html">Our Services</a> <ul>
-        <li><a href="service-detail.html#in-home">In-Home Support</a></li>
-        <li><a href="service-detail.html#spinal">Spinal Injury Care</a></li>
-        <li><a href="service-detail.html#medication">Medication Management</a></li>
-        <li><a href="service-detail.html#mental">Mental Wellbeing</a></li>
-        <li><a href="service-detail.html#personal">Personal Care</a></li>
-      </ul></li>
-      <!--Contact--><li><a href="contact.html">Contact Us</a></li>
-      <!--Styleguide--><li><a href="styleguide.html"><i class="fas fa-palette fa-lg"></i></a></li>
-  <!--CLOSE NAVIGATION-->
-  </ul></div></div></div>
-</div></div></div>
+<body class="font-sans text-stone-700">
 
-<!--HERO SECTION-->
+<!-- ============================================================
+  NAVBAR
+============================================================ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo + Brand Text -->
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+        <img src="images/navbar-logo.png" alt="DORA Health & Wellbeing" class="h-12 w-auto">
+        <div class="hidden sm:block">
+          <div class="font-serif text-brand text-base font-semibold leading-tight">Dora Health</div>
+          <div class="text-xs text-gold tracking-wider uppercase">&amp; Wellbeing</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+        <a href="index.html" class="px-4 py-2 text-sm font-600 text-gold border-b-2 border-gold">Home</a>
+        <a href="team.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Team</a>
+
+        <!-- Services Dropdown -->
+        <div class="relative group">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors flex items-center gap-1">
+            Services <i class="fas fa-chevron-down text-xs"></i>
+          </a>
+          <div class="absolute top-full left-0 w-52 bg-white shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 mt-1">
+            <a href="services.html#everyday-support"  class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">In-Home Support</a>
+            <a href="services.html#spinal-care"       class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Spinal Injury Care</a>
+            <a href="services.html#medication-mgmt"   class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Medication Management</a>
+            <a href="services.html#holistic-wellbeing" class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Mental Wellbeing</a>
+            <a href="services.html#wellness-care"     class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Personal Care</a>
+          </div>
+        </div>
+
+        <a href="testimonial.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Testimonials</a>
+        <a href="contact.html" class="ml-4 btn-gold text-sm py-2.5 px-6">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-warm" aria-label="Open menu">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-stone-100 px-4 pb-4">
+    <a href="index.html"       class="block py-3 text-sm font-semibold text-gold border-b border-stone-100">Home</a>
+    <a href="team.html"        class="block py-3 text-sm text-stone-700 border-b border-stone-100">Team</a>
+    <a href="services.html"    class="block py-3 text-sm text-stone-700 border-b border-stone-100">Services</a>
+    <a href="testimonial.html" class="block py-3 text-sm text-stone-700 border-b border-stone-100">Testimonials</a>
+    <a href="contact.html"     class="block mt-4 btn-gold text-center text-sm">Contact Us</a>
+  </div>
+</header>
+
 <main>
-<section>
-<div class="hero-section d-flex align-items-center" style="min-height: 80vh;">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 col-md-10 col-sm-12">
-                <h2 class="hero-title text-white">Complete & Holistic In-Home Care.</h2>
-                <p class="hero-text text-white"><strong>Compassionate, professional, and personalised support — at your doorstep.</strong></p>
-                <a href="#services" class="btn btn-default">Explore Services</a>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
 
-<!--SERVICES-->
-<section>
-<div class="space-medium">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="mb60 text-center section-title">
-            <h2>Our Health & Wellbeing Services</h2>
-            <h5 class="small-title">Complete in-home support, with dignity and care</h5>
-          </div>
+<!-- ============================================================
+  HERO
+============================================================ -->
+<section class="hero-section pattern-bg relative overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-white/60"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Text -->
+      <div class="fade-up">
+        <span class="section-label">Perth's In-Home Care Specialists</span>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand leading-tight mt-2 mb-6">
+          Compassionate<br>
+          <span class="text-gold italic">In-Home Care</span><br>
+          You Can Trust
+        </h1>
+        <p class="text-stone-600 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+          Personalised disability support built on lived experience, clinical expertise and genuine compassion — so you can live the life you choose, at home.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="services.html" class="btn-gold">Explore Services</a>
+          <a href="contact.html"  class="btn-outline-gold">Get in Touch</a>
         </div>
       </div>
-      <div class="row">
-        <!-- Service 1 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fa fa-house-user fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">In-Home Support</a></h2>
-              <p>Personalised daily living assistance, tailored to each client’s needs and preferences.</p>
-            </div>
+
+      <!-- Big Lotus Icon -->
+      <div class="fade-up delay-2 flex justify-center items-center">
+        <div class="relative">
+          <!-- Soft glow ring behind lotus -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-72 h-72 md:w-[420px] md:h-[420px] bg-beige/40 rounded-full blur-2xl"></div>
           </div>
-        </div>
-        <!-- Service 2 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fas fa-wheelchair fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">Spinal Injury Care</a></h2>
-              <p>Expert care for clients with spinal injuries, delivered with compassion and professionalism.</p>
-            </div>
+          <img src="images/DORA-Icon-Lotus.png"
+               alt="Dora Health & Wellbeing — lotus symbol"
+               class="lotus-hero relative z-10 drop-shadow-2xl"
+               style="width: clamp(220px, 40vw, 440px);"
+               onerror="this.src='images/Dora-Illustrations/dora-art-lotus-freestanding.png'">
+          <!-- Floating badge -->
+          <div class="absolute -bottom-4 right-0 bg-gold text-white rounded-2xl px-4 py-3 shadow-lg text-center z-20">
+            <div class="font-serif text-2xl font-bold leading-none">10+</div>
+            <div class="text-xs uppercase tracking-widest mt-0.5">Years Experience</div>
           </div>
-        </div>
-        <!-- Service 3 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fas fa-pills fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">Medication Management</a></h2>
-              <p>Reliable support to ensure safe, timely and accurate medication use in the home.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 4 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fas fa-brain fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">Mental Wellbeing</a></h2>
-              <p>Supportive care that nurtures emotional health and reduces isolation at home.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 5 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fas fa-heartbeat fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">Wellbeing Monitoring</a></h2>
-              <p>Regular check-ins and health assessments to support independence and safety.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Service 6 -->
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <div class="service-block text-center">
-            <div class="service-icon mb20">
-              <i class="fas fa-user-nurse fa-3x text-primary"></i>
-            </div>
-            <div class="service-content">
-              <h2><a href="#" class="title">Dignified Personal Care</a></h2>
-              <p>Assistance with grooming, hygiene and dressing — always with dignity and respect.</p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center">
-          <a href="/services.html" class="btn btn-default"> View All Services </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!--SERVICE CARDS THAT FLIP-->
-<section>
-  <div class="space-medium">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-8">
-                <div class="mb60 text-center section-title">
-                    <h2>Our Health & Wellbeing Services</h2>
-                    <h5 class="small-title">Complete in-home support, with dignity and care</h5>
-                </div>
-            </div>
+<!-- ============================================================
+  WHY CHOOSE US  (3 feature icons)
+============================================================ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Why Choose DORA</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2">The DORA Difference</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="text-center p-8 rounded-2xl bg-warm hover:shadow-lg transition-shadow group">
+        <div class="w-16 h-16 bg-beige rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fas fa-heart text-gold text-2xl"></i>
         </div>
-        <div class="row">
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-house-user fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>In-Home Support</h2>
-                                <p>Personalised daily living assistance, tailored to each client’s needs and preferences.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>In-Home Support</h3>
-                            <p>Dora Health & Wellbeing offers compassionate in-home support tailored to your unique daily living needs. From personal care and medication management to assistance with household tasks and community access, our team ensures you maintain independence and comfort within your own home. We focus on empowering your choices and fostering skills for a fulfilling life.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-wheelchair fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>Spinal Injury Care</h2>
-                                <p>Expert care for clients with spinal injuries, delivered with compassion and professionalism.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>Spinal Injury Care</h3>
-                            <p>Specialising in complex needs and spinal injuries, Dora Health & Wellbeing provides elite, clinically-informed care. Our experienced professionals understand the nuances of spinal injury management, offering support with rehabilitation, continence care, bowel management, and wound care. We are committed to enhancing your quality of life through expert and empathetic care.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-pills fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>Medication Management</h2>
-                                <p>Reliable support to ensure safe, timely and accurate medication use in the home.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>Medication Management</h3>
-                            <p>Ensure your health regimen is followed accurately and safely with Dora Health & Wellbeing’s medication management services. Our trained staff provide reliable support with medication reminders, dispensing, and adherence monitoring, giving you peace of mind that your prescriptions are taken correctly and on time.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-brain fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>Mental Wellbeing</h2>
-                                <p>Supportive care that nurtures emotional health and reduces isolation at home.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>Mental Wellbeing</h3>
-                            <p>At Dora Health & Wellbeing, we understand the importance of emotional health. Our supportive care nurtures mental wellbeing by reducing isolation, fostering social connections, and offering compassionate companionship. We aim to create an environment where you feel heard, valued, and supported in your emotional journey.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-heartbeat fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>Wellbeing Monitoring</h2>
-                                <p>Regular check-ins and health assessments to support independence and safety.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>Wellbeing Monitoring</h3>
-                            <p>With Dora Health & Wellbeing, you can trust in consistent oversight of your health. Our regular check-ins and health assessments provide peace of mind, proactively addressing potential concerns and adapting care plans as needed. This continuous monitoring supports your independence and enhances your safety within the comfort of your home.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front service-block text-center">
-                            <div class="service-icon mb20">
-                                <i class="fas fa-user-nurse fa-3x text-primary"></i>
-                            </div>
-                            <div class="service-content">
-                                <h2>Dignified Personal Care</h2>
-                                <p>Assistance with grooming, hygiene and dressing — always with dignity and respect.</p>
-                            </div>
-                        </div>
-                        <div class="flip-card-back service-block text-center">
-                            <h3>Dignified Personal Care</h3>
-                            <p>We uphold the highest standards of dignity and respect in all personal care services. Our compassionate team assists with grooming, hygiene, and dressing, ensuring your comfort and privacy are always prioritised. We believe personal care is a partnership, delivered with sensitivity and professionalism.</p>
-                            <a href="#" class="btn btn-sm btn-default">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+        <h3 class="font-serif text-xl text-brand mb-3">Lived Experience</h3>
+        <p class="text-stone-500 leading-relaxed text-sm">We don't just provide care; we understand it. Our team is founded on real-world lived experience, ensuring empathy is at the core of everything we do.</p>
+      </div>
+
+      <div class="text-center p-8 rounded-2xl bg-warm hover:shadow-lg transition-shadow group">
+        <div class="w-16 h-16 bg-beige rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fas fa-user-shield text-gold text-2xl"></i>
         </div>
+        <h3 class="font-serif text-xl text-brand mb-3">Clinical Excellence</h3>
+        <p class="text-stone-500 leading-relaxed text-sm">With a background in professional clinical settings, we bring expertise to spinal injury and complex care that is unmatched in Perth.</p>
+      </div>
+
+      <div class="text-center p-8 rounded-2xl bg-warm hover:shadow-lg transition-shadow group">
+        <div class="w-16 h-16 bg-beige rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fas fa-hand-holding-heart text-gold text-2xl"></i>
+        </div>
+        <h3 class="font-serif text-xl text-brand mb-3">True Dignity</h3>
+        <p class="text-stone-500 leading-relaxed text-sm">We treat every client like family. Dignity isn't just a word for us; it's the standard we hold for every personal care and wellness interaction.</p>
+      </div>
+
     </div>
   </div>
-  </section>
+</section>
 
+<!-- ============================================================
+  OUR PASSION — real photo + scroll-triggered line art
+============================================================ -->
+<section class="py-20 bg-warm section-line-bg line-bg-chair">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
 
-<!--BEIGE AREA-->
+      <!-- Real photo -->
+      <div class="order-2 md:order-1">
+        <img src="images/dora-stock/dora-stock2.png"
+             alt="DORA carer and participant — compassionate care at home"
+             class="w-full rounded-3xl shadow-soft object-cover max-h-[480px]"
+             onerror="this.src='images/dora-stock/dora-man-wheelchair.png'">
+      </div>
 
-
-<div class="space-medium bg-default">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Image Column -->
-            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 mb-4 mb-md-0">
-                <div class="card border-2 shadow-sm rounded" style="overflow: hidden;">
-                    <img src="images/about-us-image-458x476.png" alt="About DORA" class="img-fluid">
-                </div>
-            </div>
-            <!-- Text Column -->
-            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-                <div class="well-block">
-                    <h1>About DORA</h1>
-                    <h5 class="small-title">Complete In-Home Healthcare</h5>
-                    <p>DORA offers personalised, in-home health and wellbeing support for individuals living with permanent disabilities — with specialised care for spinal injuries. Our services are built on compassion, reliability, and lived experience.</p>
-                    <p>Founded with the vision of dignified care that meets people where they are, we prioritise comfort, independence, and respect in every service we provide.</p>
-                    <p>Whether it’s daily support, mobility assistance, or medical care planning, DORA is here to help you live well — at home, on your terms.</p>
-                </div>
-            </div>
+      <!-- Line art reveals on scroll, right side -->
+      <div class="order-1 md:order-2">
+        <span class="section-label">Our Passion</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-5 leading-tight">
+          Care That Goes<br>Beyond the Checklist
+        </h2>
+        <p class="text-stone-600 leading-relaxed mb-4">
+          At DORA, we believe that high-quality care is about more than completing tasks — it's about building connection, fostering independence, and respecting the human being behind the diagnosis.
+        </p>
+        <p class="text-stone-500 leading-relaxed mb-8">
+          Whether it's assistance with daily living or complex spinal injury management, our staff are hand-picked not just for their skills, but for their heart. We empower you to live the life you choose, in the place you love most: home.
+        </p>
+        <!-- Animated line drawing that appears as if drawn on scroll -->
+        <div class="mb-6">
+          <img src="images/Dora-Illustrations/dora-art-assistwalking-2.png"
+               alt="DORA line art — care support"
+               class="line-art-img h-24 opacity-0"
+               data-draw>
         </div>
+        <a href="team.html" class="btn-gold">Meet Our Team</a>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
+<!-- ============================================================
+  SERVICES OVERVIEW (flip cards)
+============================================================ -->
+<section class="py-20 bg-white" id="services">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    
-
-<!--TESTIMONIAL-->
-<div class="space-medium">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                <div class="section-title mb60 text-center">
-                    <h1>testimonials</h1>
-                    <h5 class="small-title">What Our Clients Say</h5>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">“The team at DORA don’t just support me — they treat me like family. I feel seen, respected, and in control of my care for the first time in years.”</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4 class="testimonial-name">Margaret L.</h4>
-                        <span class="testimonial-meta">68</span> <span class="testimonial-meta">Client</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">“After my spinal injury, I wasn’t sure I’d ever feel confident again. Georgia and the DORA team helped me rebuild my independence with so much compassion.”</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4 class="testimonial-name">Andre P.</h4>
-                        <span class="testimonial-meta">45</span> <span class="testimonial-meta">Client</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">“Knowing my mum is in such capable and caring hands gives our whole family peace of mind. DORA’s team is warm, reliable and truly elite.”</p>
-                    </div>
-                    <div class="testimonial-info">
-                        <h4 class="testimonial-name">Ellie M.</h4>
-                        <span class="testimonial-meta">Daughter & Primary Carer</span> <span class="testimonial-meta">Perth</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="text-center mb-14">
+      <span class="section-label">What We Offer</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-3">Our Specialist Care Services</h2>
+      <p class="text-stone-500 max-w-xl mx-auto text-sm">Hover or tap each card to learn more about how we can support you.</p>
     </div>
-</div>
 
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
 
-<!--CONTACT US-->
-
-<div class="cta-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="cta-title">Ready to get in touch?</h1>
-                <p class="cta-text">Reach out to the DORA team to discuss how we can support your care needs or answer any questions you might have.</p>
-                <a href="contact.html" class="btn btn-default">Contact Us</a>
-            </div>
+      <!-- Card 1 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-house-user text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Everyday In-Home Support</h3>
+            <p class="text-stone-500 text-sm">Practical, compassionate disability support to make daily living easier and safer at home.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Everyday In-Home Support</h3>
+            <p>Compassionate in-home support tailored to your unique daily living needs. From personal care and medication management to household tasks and community access — we ensure you maintain independence and comfort within your own home.</p>
+            <a href="services.html#everyday-support" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
         </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-wheelchair text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Premier Spinal-Injury Care</h3>
+            <p class="text-stone-500 text-sm">Comprehensive, clinically-informed in-home care for people with complex spinal injuries.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Premier Spinal-Injury Care</h3>
+            <p>Specialising in complex needs and spinal injuries, we provide elite, clinically-informed care. Our professionals understand the nuances of spinal injury management, offering support with rehabilitation, continence care, bowel management and wound care.</p>
+            <a href="services.html#spinal-care" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-pills text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Medication Management</h3>
+            <p class="text-stone-500 text-sm">Reliable, in-home medication reminders, dispensing and adherence monitoring.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Medication Management</h3>
+            <p>Our trained staff provide medication reminders, dispensing and adherence monitoring — giving you peace of mind that your prescriptions are taken correctly and on time, every time.</p>
+            <a href="services.html#medication-mgmt" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-brain text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Holistic Wellbeing</h3>
+            <p class="text-stone-500 text-sm">In-home care that extends to mental health — fostering resilience and connection.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Holistic Wellbeing</h3>
+            <p>We understand the importance of emotional health. Our supportive care nurtures mental wellbeing by reducing isolation, fostering social connections, and offering compassionate companionship — so you feel heard, valued and supported.</p>
+            <a href="services.html#holistic-wellbeing" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-heartbeat text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Healthcare Monitoring</h3>
+            <p class="text-stone-500 text-sm">Proactive, comprehensive healthcare management as part of your disability support.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Healthcare Monitoring</h3>
+            <p>Regular check-ins and health assessments provide peace of mind, proactively addressing potential concerns and adapting care plans as needed — supporting your independence and enhancing your safety at home.</p>
+            <a href="services.html#healthcare-monitoring" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flip-card cursor-pointer" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-user-nurse text-gold text-4xl mb-4"></i>
+            <h3 class="font-serif text-xl text-brand mb-2">Dignified Personal Care</h3>
+            <p class="text-stone-500 text-sm">Personal grooming, meal preparation and companionship — delivered with dignity.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Dignified Personal Care</h3>
+            <p>We uphold the highest standards of dignity and respect in all personal care services. Our compassionate team assists with grooming, hygiene and dressing — ensuring your comfort and privacy are always prioritised.</p>
+            <a href="services.html#wellness-care" class="mt-4 btn-gold text-xs py-2 px-5">Learn More</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-</div>
-<!--section-->
-<div class="space-medium">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-                <div class="section-title mb40 text-center">
-                    <!-- section title start-->
-                    <h1>Latest News &amp; Updates</h1>
-                </div>
-                <!-- /.section title start-->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="post-block">
-                    <div class="row">
-                        <!-- post block -->
-                        <div class="col-md-6">
-                            <div class="post-img">
-                                <a href="#"><img src="images/post-img-0.png" alt="In-home care article image" class="img-responsive"></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="post-content">
-                                <h2><a href="#" class="title">Supporting Independence Through In-Home Care</a></h2>
-                                <p class="meta">
-                                    <span class="meta-date">16 May 2025</span>
-                                    <span class="meta-comment"><a href="#">(3) Comments</a></span>
-                                    <span class="meta-author">By <a href="#">DORA Team</a></span>
-                                </p>
-                                <p>At DORA, our mission is to support people with permanent disabilities in their own homes, with compassion, consistency, and care built on lived experience.</p>
-                                <a href="#" class="btn btn-default">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.post block -->
-                </div>
-            </div>
-        </div>
+
+    <div class="text-center">
+      <a href="services.html" class="btn-outline-gold">View Full Service List</a>
     </div>
-</div>
+  </div>
+</section>
+
+<!-- ============================================================
+  TEAM PREVIEW — real staff photos
+============================================================ -->
+<section class="py-20 bg-warm section-line-bg line-bg-lotus">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <span class="section-label">Our Team</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-5 leading-tight">
+          Meet Our<br>Exceptional Team
+        </h2>
+        <p class="text-stone-600 leading-relaxed mb-4">Our team is built on clinical expertise and real-world lived experience. We are more than just carers; we are a family dedicated to yours.</p>
+        <p class="text-stone-500 leading-relaxed mb-8">Every member of the DORA team is hand-picked for their compassion, professionalism and commitment to our core values of dignity, respect and excellence.</p>
+        <a href="team.html" class="btn-gold">Meet the Team</a>
+      </div>
+
+      <!-- 2×2 grid of real team photos -->
+      <div class="grid grid-cols-2 gap-4">
+        <img src="images/dora-team/dora-george+andrew wedding.jpg"
+             alt="George and Andrew from DORA"
+             class="rounded-2xl shadow-soft w-full h-52 object-cover object-top">
+        <img src="images/dora-team/george and thea tempo.jpg"
+             alt="George and Thea, DORA founders"
+             class="rounded-2xl shadow-soft w-full h-52 object-cover object-top mt-6"
+             onerror="this.src='images/dora-team/dora-team-thea+george.png'">
+        <img src="images/dora-team/dora-george+karl.jpg"
+             alt="DORA team member"
+             class="rounded-2xl shadow-soft w-full h-52 object-cover object-center">
+        <img src="images/dora-team/dora-george+thea+andrew1.jpg"
+             alt="DORA team George, Thea and Andrew"
+             class="rounded-2xl shadow-soft w-full h-52 object-cover object-top mt-6"
+             onerror="this.src='images/dora-team/team 4thea andrew and george .png'">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  ABOUT — illustration side + line drawing bg
+============================================================ -->
+<section class="py-20 bg-white section-line-bg line-bg-nurse">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+
+      <div>
+        <span class="section-label">About Us</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-5 leading-tight">
+          Complete In-Home<br>Healthcare — Perth
+        </h2>
+        <p class="text-stone-600 leading-relaxed mb-4">
+          <strong>Our Mission</strong> — At DORA Health &amp; Wellbeing, we deliver compassionate, personalised in-home care that empowers independence. We combine clinical expertise with human connection, ensuring dignity, safety, and quality of life in every interaction.
+        </p>
+        <p class="text-stone-500 leading-relaxed mb-4">
+          <strong>Our Services</strong> — DORA offers a full suite of in-home care services, from daily living support to specialised spinal injury care. Each service is tailored to individual needs, with a focus on respect, safety, and holistic wellbeing.
+        </p>
+        <p class="text-stone-500 leading-relaxed mb-8">
+          <strong>Our Staff</strong> — The DORA team is made up of skilled, dedicated professionals who go beyond care to build trust and connection. From trained nurses to experienced carers, every staff member is committed to expert disability support with compassion.
+        </p>
+        <a href="services.html" class="btn-gold">Our Services</a>
+      </div>
+
+      <div class="illus-wrapper p-8">
+        <img src="images/Dora-Illustrations/dora-Georga+Thea+Andrew.png"
+             alt="DORA Health & Wellbeing team illustration"
+             class="float-anim-2 w-full max-w-md drop-shadow-xl"
+             onerror="this.src='images/Dora-Illustrations/George+Andrew-2.png'">
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-stone-100 pt-12">
+      <div class="stat-card">
+        <div class="number">10+</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">100%</div>
+        <div class="label">Personalised Plans</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">24/7</div>
+        <div class="label">Support Available</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">5★</div>
+        <div class="label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  COMMUNITY & CHOICE — line drawing bg
+============================================================ -->
+<section class="py-20 bg-warm section-line-bg line-bg-walk">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Scroll-draw line art left side -->
+      <div class="order-2 md:order-1 flex flex-col items-center gap-6">
+        <img src="images/dora-stock/dora-stock5.png"
+             alt="Community support — living life on your terms"
+             class="w-full rounded-3xl shadow-soft object-cover max-h-[380px]"
+             onerror="this.src='images/dora-stock/dora-stock4.png'">
+        <!-- Animated line art overlaid below photo -->
+        <img src="images/Dora-Illustrations/dora man pushing wheelchair with line.png"
+             alt="DORA carer with participant in community"
+             class="line-art-img h-28 mx-auto"
+             data-draw>
+      </div>
+      </div>
+
+      <div class="order-1 md:order-2">
+        <span class="section-label">Community &amp; Choice</span>
+        <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-5 leading-tight">
+          Living Life<br>On Your Terms
+        </h2>
+        <p class="text-stone-600 leading-relaxed mb-4">Your home is your sanctuary, and your community is your playground. We support you in staying connected to the people and places that matter most.</p>
+        <p class="text-stone-500 leading-relaxed mb-8">From social outings and community participation to maintaining your household exactly how you like it — our support workers are here to facilitate your vision for your life. We don't dictate; we collaborate.</p>
+        <a href="contact.html" class="btn-gold">Start Your Journey</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  TESTIMONIALS
+============================================================ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Kind Words</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2">What Our Clients Say</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+      <div class="testimonial-card">
+        <p class="text-stone-600 italic leading-relaxed mb-6 relative z-10">"The team at DORA don't just support me — they treat me like family. I feel seen, respected, and in control of my care for the first time in years."</p>
+        <div>
+          <div class="font-semibold text-brand">Margaret L.</div>
+          <div class="text-sm text-gold">Client, 68</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="text-stone-600 italic leading-relaxed mb-6 relative z-10">"After my spinal injury, I wasn't sure I'd ever feel confident again. Georgia and the DORA team helped me rebuild my independence with so much compassion."</p>
+        <div>
+          <div class="font-semibold text-brand">Andre P.</div>
+          <div class="text-sm text-gold">Client, 45</div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="text-stone-600 italic leading-relaxed mb-6 relative z-10">"Knowing my mum is in such capable and caring hands gives our whole family peace of mind. DORA's team is warm, reliable and truly elite."</p>
+        <div>
+          <div class="font-semibold text-brand">Ellie M.</div>
+          <div class="text-sm text-gold">Daughter &amp; Primary Carer, Perth</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <a href="testimonial.html" class="btn-outline-gold">Read All Testimonials</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  OUR COMMITMENT (pattern CTA)
+============================================================ -->
+<section class="py-24 pattern-bg relative">
+  <div class="absolute inset-0 bg-white/70"></div>
+  <div class="relative max-w-3xl mx-auto px-4 text-center">
+    <span class="section-label">Our Commitment</span>
+    <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2 mb-5">
+      "To provide a standard of care we would be proud to provide to our own families."
+    </h2>
+    <p class="text-stone-600 mb-3">Every day. Every participant. No exceptions.</p>
+    <img src="images/navbar-logo.png" alt="DORA" class="h-16 mx-auto mt-6 opacity-40">
+  </div>
+</section>
+
+<!-- ============================================================
+  CTA BANNER
+============================================================ -->
+<section class="py-20 pattern-bg relative overflow-hidden"><div class="absolute inset-0 bg-brand/90"></div>
+  <div class="relative max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">How Can We Support You?</h2>
+    <p class="text-stone-300 text-lg mb-8">Ready to discuss your care needs? Contact us today and a member of our team will be in touch within one business day.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="contact.html"  class="btn-gold">Contact Us</a>
+      <a href="tel:0438335050" class="btn-white">Call: 0438 335 050</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<!--FOOTER-->
-<div class="footer">
-<div class="container">
-    <div class="footer-block">
-        <!-- footer block -->
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="footer-widget">
-                    <h2 class="widget-title">DORA Address</h2>
-                    <ul class="listnone contact">
-                        <li><i class="fa fa-map-marker"></i> Joondalup, Western Australia</li>
-                        <li><i class="fa fa-phone"></i> (08) 0000 0000</li>
-                        <li><i class="fa fa-fax"></i> (08) 0000 0001</li>
-                        <li><i class="fa fa-envelope-o"></i> hello@dorahealth.com.au</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="footer-widget footer-social">
-                    <!-- social block -->
-                    <h2 class="widget-title">Social Feed</h2>
-                    <ul class="listnone">
-                        <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
-                <!-- /.social block -->
-            </div>
-            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                <div class="footer-widget widget-newsletter">
-                    <!-- newsletter block -->
-                    <h2 class="widget-title">Newsletter</h2>
-                    <p>Enter your email to stay updated on care services, team updates, and helpful resources from DORA.</p>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Email Address">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Subscribe</button>
-                        </span>
-                    </div>
-                    <!-- /input-group -->
-                </div>
-                <!-- newsletter block -->
-            </div>
-        </div>
-        <div class="tiny-footer">
-            <!-- tiny footer block -->
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="copyright-content">
-                        &copy; DORA Health & Wellbeing. All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.tiny footer block -->
+<!-- ============================================================
+  FOOTER
+============================================================ -->
+<footer class="bg-stone-900 text-stone-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <img src="images/navbar-logo.png" alt="DORA Health & Wellbeing" class="h-12 mb-4 opacity-80">
+        <p class="text-sm leading-relaxed text-stone-400">Perth's In-Home Care Specialists.<br>Compassionate. Dignified. Personalised.</p>
+      </div>
+
+      <!-- Address -->
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-gold mt-1"></i> 22B Chesterfield Avenue, Hocking WA</li>
+          <li class="flex items-center gap-2"><i class="fas fa-phone text-gold"></i> <a href="tel:0438335050" class="footer-link hover:text-gold">0438 335 050</a></li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope text-gold"></i> <a href="mailto:info@dorahealth.com.au" class="footer-link hover:text-gold">info@dorahealth.com.au</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Follow Us</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-facebook text-gold w-4"></i> Facebook</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-instagram text-gold w-4"></i> Instagram</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-linkedin text-gold w-4"></i> LinkedIn</a></li>
+          <li><a href="https://maps.app.goo.gl/9Zp7y2n5u9vP9XqZA" target="_blank" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-google text-gold w-4"></i> Google My Business</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- /.footer block -->
-</div></div>
-<!-- /.footer-->
 
+    <div class="border-t border-stone-700 pt-6 text-center text-xs text-stone-500">
+      &copy; 2025 DORA Health &amp; Wellbeing. All rights reserved.
+    </div>
+  </div>
+</footer>
 
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menumaker.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/sticky-header.js"></script>
-    <script src="js/flip-card.js"></script>
-    <script src="js/main.js" ></script>
+  // Mobile menu toggle
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+
+  // Flip card touch support
+  document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') card.classList.toggle('flipped');
+    });
+  });
+
+  // Intersection Observer — fade-up for sections
+  const sectionObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('fade-up'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('section, .flip-card, .testimonial-card, .stat-card').forEach(el => sectionObs.observe(el));
+
+  // Intersection Observer — scroll-triggered line art "drawn" animation
+  const drawObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('drawn');
+        drawObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('[data-draw]').forEach(el => drawObs.observe(el));
+</script>
+
 </body>
-    </html>
+</html>

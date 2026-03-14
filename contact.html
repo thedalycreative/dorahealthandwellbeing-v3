@@ -1,244 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
-    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>Men Salon | Hair Salon Website Templates Free Download</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with DORA Health & Wellbeing. Compassionate in-home care services in Perth. Reach out today for more information.">
+  <meta name="keywords" content="contact DORA Health, Perth disability support contact, in-home care enquiry WA">
+  <title>DORA Health & Wellbeing | Contact Us</title>
+
+  <link rel="icon" type="image/png" href="images/DORA-Icon-32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#aa9144', 'gold-dk': '#8e7424',
+            warm: '#f4f1ec', beige: '#eddba5', brand: '#1e1c18',
+          },
+          fontFamily: { sans: ['Inter','sans-serif'], serif: ['Playfair Display','serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="css/dora.css" rel="stylesheet">
+  <style>
+    @keyframes floatUp { 0%{transform:translateY(0)} 50%{transform:translateY(-12px)} 100%{transform:translateY(0)} }
+    .float-anim { animation: floatUp 6s ease-in-out infinite; }
+  </style>
 </head>
 
-<body>
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <a href="index.html"><img src="images/logo.png" alt=""></a>
-                </div>
-                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
-                    <div class="navigation">
-                        <div id="navigation">
-                            <ul>
-                                <li class="active"><a href="index.html" title="Home">Home</a></li>
-                                <li class="has-sub"><a href="service-list.html" title="Service List">Service List</a>
-                                    <ul>
-                                        <li><a href="service-list.html" title="Service List">Service List</a></li>
-                                        <li><a href="service-detail.html" title="Service Detail">Service Detail</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-sub"><a href="blog-default.html" title="Blog ">News</a>
-                                    <ul>
-                                        <li><a href="blog-default.html" title="Blog">Blog Default</a></li>
-                                        <li><a href="blog-single.html" title="Blog Single ">Blog Single</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" title="Features">Features</a>
-                                    <ul>
-                                        <li><a href="testimonial.html" title="Service List">Testimonial</a></li>
-                                        <li><a href="styleguide.html" title="Service Detail">Style Guide</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html" title="Contact Us">Contact</a> </li>
-                                <li><a href="styleguide.html" title="Styleguide">styleguide</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="page-caption">
-                        <h2 class="page-title">Contact us</h2>
-                        <div class="page-breadcrumb">
-                            <ol class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active">Contact us</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="widget widget-contact">
-                        <!-- widget search -->
-                        <h3 class="widget-title">Contact Info</h3>
-                        <address>
-                            <strong>Flower.</strong>
-                            <br> 1355 Market Street, Suite 900
-                            <br> San Francisco, CA 94103
-                            <br>
-                            <abbr title="Phone">P:</abbr> (123) 456-7890
-                        </address>
-                        <address>
-                            <strong>Contact Name</strong>
-                            <br>
-                            <a href="mailto:#">yourdomain@gmail.com</a>
-                        </address>
-                    </div>
-                    <!-- /.widget search -->
-                    <div class="widget widget-social">
-                        <div class="social-circle">
-                            <a href="#" class="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="#"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h1>Contact Form</h1>
-                            <p> Please complete the form below. We'll do everything we can to respond to you as quickly as possible.</p>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="name">name</label>
-                                        <input type="text" name="name" id="name" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="phone">phone</label>
-                                        <input type="phone" name="phone" id="phone" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="email">email</label>
-                                        <input type="email" name="email" id="email" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="control-label" for="Subject">Subject</label>
-                                        <input type="text" name="Subject" id="Subject" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label class="control-label" for="textarea">Message</label>
-                                            <textarea class="form-control" id="textarea" name="textarea" rows="6" placeholder=""></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-default" type="submit">send message</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <!-- footer-->
-        <div class="container">
-            <div class="footer-block">
-                <!-- footer block -->
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="footer-widget">
-                            <h2 class="widget-title">Salon Address</h2>
-                            <ul class="listnone contact">
-                                <li><i class="fa fa-map-marker"></i> 4958 Norman Street Los Angeles, CA 90042 </li>
-                                <li><i class="fa fa-phone"></i> +00 (800) 123-4567</li>
-                                <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-                                <li><i class="fa fa-envelope-o"></i> info@salon.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-widget footer-social">
-                            <!-- social block -->
-                            <h2 class="widget-title">Social Feed</h2>
-                            <ul class="listnone">
-                                <li>
-                                    <a href="#"> <i class="fa fa-facebook"></i> Facebook </a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i> Linked In</a></li>
-                                <li>
-                                    <a href="#"> <i class="fa fa-youtube"></i>Youtube</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.social block -->
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                        <div class="footer-widget widget-newsletter">
-                            <!-- newsletter block -->
-                            <h2 class="widget-title">Newsletters</h2>
-                            <p>Enter your email address to receive new patient information and other useful information right to your inbox.</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
-                                <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Subscribe</button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </div>
-                        <!-- newsletter block -->
-                    </div>
-                </div>
-                <div class="tiny-footer">
-                    <!-- tiny footer block -->
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="copyright-content">
-                               Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.tiny footer block -->
-            </div>
-            <!-- /.footer block -->
-        </div>
-    </div>
-    <!-- /.footer-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menumaker.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/sticky-header.js"></script>
-</body>
+<body class="font-sans text-stone-700">
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "sBwdVfGSJVNFh56es",
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+        <img src="images/navbar-logo.png" alt="DORA Health &amp; Wellbeing" class="h-12 w-auto">
+        <div class="hidden sm:block">
+          <div class="font-serif text-brand text-base font-semibold leading-tight">Dora Health</div>
+          <div class="text-xs text-gold tracking-wider uppercase">&amp; Wellbeing</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="index.html"       class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Home</a>
+        <a href="team.html"        class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Team</a>
+        <div class="relative group">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors flex items-center gap-1">Services <i class="fas fa-chevron-down text-xs"></i></a>
+          <div class="absolute top-full left-0 w-52 bg-white shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 mt-1">
+            <a href="services.html#everyday-support"   class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">In-Home Support</a>
+            <a href="services.html#spinal-care"        class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Spinal Injury Care</a>
+            <a href="services.html#medication-mgmt"    class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Medication Management</a>
+            <a href="services.html#holistic-wellbeing" class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Mental Wellbeing</a>
+            <a href="services.html#wellness-care"      class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Personal Care</a>
+          </div>
+        </div>
+        <a href="testimonial.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Testimonials</a>
+        <a href="contact.html"     class="ml-4 btn-gold text-sm py-2.5 px-6">Contact Us</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-warm"><i class="fas fa-bars text-xl"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-stone-100 px-4 pb-4">
+    <a href="index.html"       class="block py-3 text-sm text-stone-700 border-b border-stone-100">Home</a>
+    <a href="team.html"        class="block py-3 text-sm text-stone-700 border-b border-stone-100">Team</a>
+    <a href="services.html"    class="block py-3 text-sm text-stone-700 border-b border-stone-100">Services</a>
+    <a href="testimonial.html" class="block py-3 text-sm text-stone-700 border-b border-stone-100">Testimonials</a>
+    <a href="contact.html"     class="block mt-4 btn-gold text-center text-sm font-semibold text-gold">Contact Us</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero-section pattern-bg relative overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-white/65"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <span class="section-label">Get in Touch</span>
+    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand leading-tight mt-2 mb-6">
+      We'd Love to<br><span class="text-gold italic">Hear From You</span>
+    </h1>
+    <p class="text-stone-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-6">
+      Ready to discuss your care needs? Reach out today and we'll respond within one business day.
+    </p>
+    <img src="images/Dora-Illustrations/dora-cld-hands and text.png"
+         alt="DORA helping hands"
+         class="h-24 mx-auto float-anim opacity-60"
+         onerror="this.src='images/Dora-Illustrations/doraCLD-handswithtext.png'">  
+  </div>
+</section>
+
+<!-- ============================================================
+  CONTACT INFO + FORM
+============================================================ -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-5 gap-12">
+
+      <!-- Contact Info -->
+      <div class="md:col-span-2 space-y-6">
+        <div>
+          <span class="section-label">Contact Information</span>
+          <h2 class="font-serif text-2xl md:text-3xl text-brand mt-2 mb-6">How to Reach Us</h2>
+        </div>
+
+        <div class="space-y-5">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-beige rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-map-marker-alt text-gold text-sm"></i>
+            </div>
+            <div>
+              <div class="font-semibold text-brand text-sm mb-0.5">Address</div>
+              <div class="text-stone-500 text-sm">22B Chesterfield Avenue<br>Hocking WA, Australia</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-beige rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-phone text-gold text-sm"></i>
+            </div>
+            <div>
+              <div class="font-semibold text-brand text-sm mb-0.5">Phone</div>
+              <a href="tel:0438335050" class="text-stone-500 text-sm hover:text-gold transition-colors">0438 335 050</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-beige rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-envelope text-gold text-sm"></i>
+            </div>
+            <div>
+              <div class="font-semibold text-brand text-sm mb-0.5">Email</div>
+              <a href="mailto:info@dorahealth.com.au" class="text-stone-500 text-sm hover:text-gold transition-colors">info@dorahealth.com.au</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-beige rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-clock text-gold text-sm"></i>
+            </div>
+            <div>
+              <div class="font-semibold text-brand text-sm mb-0.5">Response Time</div>
+              <div class="text-stone-500 text-sm">Within 1 business day</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="pt-4 border-t border-stone-100">
+          <div class="font-semibold text-brand text-sm mb-3">Follow Us</div>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 bg-warm rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-stone-500">
+              <i class="fab fa-facebook text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-warm rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-stone-500">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-warm rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-stone-500">
+              <i class="fab fa-linkedin text-sm"></i>
+            </a>
+            <a href="https://maps.app.goo.gl/9Zp7y2n5u9vP9XqZA" target="_blank" class="w-10 h-10 bg-warm rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-stone-500">
+              <i class="fab fa-google text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Trust badge -->
+        <div class="bg-warm rounded-2xl p-5">
+          <div class="font-serif text-brand font-semibold mb-1">NDIS Registered Provider</div>
+          <p class="text-stone-500 text-xs leading-relaxed">We are a registered NDIS provider in Western Australia, offering funded disability support services.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="md:col-span-3">
+        <div class="bg-warm rounded-3xl p-8 md:p-10">
+          <h2 class="font-serif text-2xl text-brand mb-2">Send Us a Message</h2>
+          <p class="text-stone-500 text-sm mb-8">Complete the form below and we'll get back to you as quickly as possible.</p>
+
+          <form id="contact-form" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-xs font-semibold text-brand uppercase tracking-wider mb-2">Your Name *</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                  placeholder="Jane Smith">
+              </div>
+              <div>
+                <label for="phone" class="block text-xs font-semibold text-brand uppercase tracking-wider mb-2">Phone Number</label>
+                <input type="tel" id="phone" name="phone"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                  placeholder="04xx xxx xxx">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="email" class="block text-xs font-semibold text-brand uppercase tracking-wider mb-2">Email Address *</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all"
+                  placeholder="jane@email.com">
+              </div>
+              <div>
+                <label for="subject" class="block text-xs font-semibold text-brand uppercase tracking-wider mb-2">Subject</label>
+                <select id="subject" name="subject"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all">
+                  <option value="">Select a topic…</option>
+                  <option>General Enquiry</option>
+                  <option>In-Home Support</option>
+                  <option>Spinal Injury Care</option>
+                  <option>Medication Management</option>
+                  <option>NDIS Funding</option>
+                  <option>Employment</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="textarea" class="block text-xs font-semibold text-brand uppercase tracking-wider mb-2">Your Message *</label>
+              <textarea id="textarea" name="textarea" rows="5" required
+                class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all resize-none"
+                placeholder="Tell us how we can help you…"></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn"
+              class="w-full btn-gold text-center flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+
+            <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-xl px-4 py-3 text-sm text-center">
+              <i class="fas fa-check-circle mr-2"></i> Thank you! We'll be in touch within one business day.
+            </div>
+            <div id="form-error" class="hidden bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm text-center">
+              <i class="fas fa-exclamation-circle mr-2"></i> Something went wrong. Please try again or call us directly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Map embed -->
+<section class="bg-warm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="rounded-3xl overflow-hidden shadow-soft">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3388.8!2d115.792!3d-31.698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sHocking+WA+6065!5e0!3m2!1sen!2sau!4v1600000000000!5m2!1sen!2sau"
+        width="100%" height="380" style="border:0;" allowfullscreen loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="DORA Health Hocking location map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-stone-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+      <div>
+        <img src="images/navbar-logo.png" alt="DORA" class="h-12 mb-4 opacity-80">
+        <p class="text-sm leading-relaxed">Perth's In-Home Care Specialists.<br>Compassionate. Dignified. Personalised.</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-gold mt-1"></i> 22B Chesterfield Avenue, Hocking WA</li>
+          <li class="flex items-center gap-2"><i class="fas fa-phone text-gold"></i> <a href="tel:0438335050" class="footer-link">0438 335 050</a></li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope text-gold"></i> <a href="mailto:info@dorahealth.com.au" class="footer-link">info@dorahealth.com.au</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Follow Us</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-facebook text-gold w-4"></i> Facebook</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-instagram text-gold w-4"></i> Instagram</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-linkedin text-gold w-4"></i> LinkedIn</a></li>
+          <li><a href="https://maps.app.goo.gl/9Zp7y2n5u9vP9XqZA" target="_blank" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-google text-gold w-4"></i> Google My Business</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-stone-700 pt-6 text-center text-xs text-stone-500">
+      &copy; 2025 DORA Health &amp; Wellbeing. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init({ publicKey: "sBwdVfGSJVNFh56es" });
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending…';
+
+    emailjs.sendForm('service_m1oc92d', 'template_0crogia', this)
+      .then(() => {
+        document.getElementById('form-success').classList.remove('hidden');
+        document.getElementById('form-error').classList.add('hidden');
+        this.reset();
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      }, (err) => {
+        console.error(err);
+        document.getElementById('form-error').classList.remove('hidden');
+        document.getElementById('form-success').classList.add('hidden');
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       });
-   })();
-</script>
-<script src="contact.js"></script>
+  });
 
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
+</body>
 </html>

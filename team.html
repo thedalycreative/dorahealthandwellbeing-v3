@@ -1,175 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
-    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
-    <title>DORA Health & Wellbeing</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <!-- Style -->
-    <link href="css/style.css" rel="stylesheet">
-    <!--Cloudflare-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js "></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js "></script>
-<![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the DORA Health & Wellbeing team — led by founder George, we provide compassionate and professional in-home care in Perth, WA.">
+  <meta name="keywords" content="George DORA Health, Perth home care team, disability support workers WA, spinal care experts Perth">
+  <title>DORA Health & Wellbeing | Our Team</title>
+
+  <link rel="icon" type="image/png" href="images/DORA-Icon-32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#aa9144', 'gold-dk': '#8e7424',
+            warm: '#f4f1ec', beige: '#eddba5', brand: '#1e1c18',
+          },
+          fontFamily: { sans: ['Inter','sans-serif'], serif: ['Playfair Display','serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="css/dora.css" rel="stylesheet">
+  <style>
+    @keyframes floatUp { 0%{transform:translateY(0)} 50%{transform:translateY(-12px)} 100%{transform:translateY(0)} }
+    .float-anim   { animation: floatUp 6s ease-in-out infinite; }
+    .float-anim-2 { animation: floatUp 7s ease-in-out 1s infinite; }
+    .illus-wrapper { position:relative; display:flex; align-items:center; justify-content:center; }
+    .illus-wrapper::before { content:''; position:absolute; width:85%; height:85%; background:rgba(237,219,165,.2); border-radius:50%; z-index:0; }
+    .illus-wrapper img { position:relative; z-index:1; }
+    @keyframes gradientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
-<body>
 
-<!------------- NAVBAR --------------->
-<div class="header"><div class="container"><div class="row align-items-center">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <!--Logo--><a href="index.html"> <img src="images/logo.png" alt="DORA Health Logo"></a></div>
-        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12"> <div class="navigation"><div id="navigation"><ul>
-      <!--Team--><li><a href="team.html">Our Team</a></li>
-      <!--Services-->
-      <li class="has-sub"><a href="service-detail.html">Our Services</a> <ul>
-        <li><a href="service-detail.html#in-home">In-Home Support</a></li>
-        <li><a href="service-detail.html#spinal">Spinal Injury Care</a></li>
-        <li><a href="service-detail.html#medication">Medication Management</a></li>
-        <li><a href="service-detail.html#mental">Mental Wellbeing</a></li>
-        <li><a href="service-detail.html#personal">Personal Care</a></li>
-      </ul></li>
-      <!--Contact--><li><a href="contact.html">Contact Us</a></li>
-  <!---------- /NAVBAR --------------->
-  </ul></div></div></div>
-</div></div></div>
+<body class="font-sans text-stone-700">
 
-
-    <main>
-        <section>
-            <div class="hero-section d-flex align-items-center" style="min-height: 50vh;">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-7 col-md-10 col-sm-12">
-                            <h2 class="hero-title text-white">Our Exceptional Team</h2>
-                            <p class="hero-text text-white"><strong>Dedicated, compassionate and reliable - truely the best family! </strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="space-medium">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8">
-                        <div class="mb60 text-center section-title">
-                            <h1>Meet Our Founder</h1>
-                            <h5 class="small-title">George: A Nurse by Nature, A Leader by Heart</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="row team-member-block mb60">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-4 mb-md-0">
-                                <div class="card border-2 shadow-sm rounded" style="overflow: hidden;">
-                                    <img src="/images/team1-georgeandthea" alt="George, Founder and CEO of DORA Health & Wellbeing" class="img-fluid">
-                                    <div class="card-body p-3">
-                                        <h4 class="mb-0">George & Thea</h4> 
-                                        <p class="text-muted">Founder & Director</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                                <p>Even from a young age, George's path seemed clear. As a toddler, barely two or three years old, she was already embracing the role, playfully donning a nurse's outfit and earning the affectionate nickname, "Nurse Georgina." This early inclination foreshadowed a lifelong passion for caring for others.</p>
-                                <p>George pursued her calling with unwavering dedication, attending the University of Cumbria for Health and Social Care from 16-18, before completing her Bachelor of Science in Nursing. She describes her university years as a "bustling hive," where she not only thrived academically but also forged strong bonds with her peers.</p>
-                                <p>"I live by my choice, and anyone that knows me will attest to the fact that I'm a nurse not by trade or by job or means of employment, but I'm a nurse by nature," George explains. "Nurse Georgina was fortunate enough to find the job of her dreams, which doesn't happen as often as we all would like – but I am very fortunate that I could study and work in the field I enjoy so much."</p>
-                                <p>For many years, George honed her skills working with private clients requiring specialist care and high levels of support. She quickly discovered a natural aptitude for this demanding field. "Being a nurse for a patient with paraplegia and then quadriplegia – I've got the knack for it, or so I'm told," she shares, highlighting her unique ability to connect with and effectively care for those with complex needs.</p>
-                                <p>In 2023, George and her husband made the significant move from England to Perth, Western Australia, with their newborn daughter, Thea. The decision was rooted in a desire for Thea to grow up close to family. They instantly fell in love with Perth, settling north of the river. Now, their little one is almost three, and George cherishes the time Thea gets to spend with their British family who have also "migrated across the pond/ditch."</p>
-                                <p>It was shortly after their move that George identified a critical gap in Perth's healthcare landscape. "A client I had specialist care for a while now pointed out the gap in healthcare here in Perth," she recalls. "WA seems to have this gap in the market where you can't get a good, decent, reliable, helpful support worker – in fact, you are lucky to get one with experience at all! NDIS funded programs mean there's a lot of resources available out there, and I know how hard it is to get funding."</p>
-                                <p>Driven by this observation and her profound commitment to quality care, George founded Dora Healthcare. The company is named after her daughter, Theadora, symbolizing the personal heart and soul poured into its mission. "I am lucky to be both happy and successful with my career," George states, "and my company Dora has got the best healthcare workers that I can find in Perth – myself included."</p>
-                                <p>George is excited to continue her journey, showcase the growth of Dora Healthcare, and provide the best possible support to people in Perth.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+        <img src="images/navbar-logo.png" alt="DORA Health &amp; Wellbeing" class="h-12 w-auto">
+        <div class="hidden sm:block">
+          <div class="font-serif text-brand text-base font-semibold leading-tight">Dora Health</div>
+          <div class="text-xs text-gold tracking-wider uppercase">&amp; Wellbeing</div>
         </div>
-
-        <div class="cta-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="cta-title">Ready to get in touch?</h1>
-                        <p class="cta-text">Reach out to the DORA team to discuss how we can support your care needs or answer any questions you might have.</p>
-                        <a href="contact.html" class="btn btn-default">Contact Us</a>
-                    </div>
-                </div>
-            </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="index.html"       class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Home</a>
+        <a href="team.html"        class="px-4 py-2 text-sm font-600 text-gold border-b-2 border-gold">Team</a>
+        <div class="relative group">
+          <a href="services.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors flex items-center gap-1">Services <i class="fas fa-chevron-down text-xs"></i></a>
+          <div class="absolute top-full left-0 w-52 bg-white shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 mt-1">
+            <a href="services.html#everyday-support"   class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">In-Home Support</a>
+            <a href="services.html#spinal-care"        class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Spinal Injury Care</a>
+            <a href="services.html#medication-mgmt"    class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Medication Management</a>
+            <a href="services.html#holistic-wellbeing" class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Mental Wellbeing</a>
+            <a href="services.html#wellness-care"      class="block px-4 py-2.5 text-sm text-stone-700 hover:bg-warm hover:text-gold">Personal Care</a>
+          </div>
         </div>
-        <br>
-    </main>
+        <a href="testimonial.html" class="px-4 py-2 text-sm font-medium text-stone-700 hover:text-gold transition-colors">Testimonials</a>
+        <a href="contact.html"     class="ml-4 btn-gold text-sm py-2.5 px-6">Contact Us</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-warm"><i class="fas fa-bars text-xl"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-white border-t border-stone-100 px-4 pb-4">
+    <a href="index.html"       class="block py-3 text-sm text-stone-700 border-b border-stone-100">Home</a>
+    <a href="team.html"        class="block py-3 text-sm font-semibold text-gold border-b border-stone-100">Team</a>
+    <a href="services.html"    class="block py-3 text-sm text-stone-700 border-b border-stone-100">Services</a>
+    <a href="testimonial.html" class="block py-3 text-sm text-stone-700 border-b border-stone-100">Testimonials</a>
+    <a href="contact.html"     class="block mt-4 btn-gold text-center text-sm">Contact Us</a>
+  </div>
+</header>
 
-    <div class="footer">
-        <div class="container">
-            <div class="footer-block">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="footer-widget">
-                            <h2 class="widget-title">DORA Address</h2>
-                            <ul class="listnone contact">
-                                <li><i class="fa fa-map-marker"></i> Joondalup, Western Australia</li>
-                                <li><i class="fa fa-phone"></i> (08) 0000 0000</li>
-                                <li><i class="fa fa-fax"></i> (08) 0000 0001</li>
-                                <li><i class="fa fa-envelope-o"></i> hello@dorahealth.com.au</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-widget footer-social">
-                            <h2 class="widget-title">Social Feed</h2>
-                            <ul class="listnone">
-                                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                        <div class="footer-widget widget-newsletter">
-                            <h2 class="widget-title">Newsletter</h2>
-                            <p>Enter your email to stay updated on care services, team updates, and helpful resources from DORA.</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Email Address">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">Subscribe</button>
-                                </span>
-                            </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="tiny-footer">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="copyright-content">
-                                &copy; DORA Health & Wellbeing. All rights reserved.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
+<main>
+
+<!-- HERO -->
+<section class="hero-section pattern-bg relative overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-white/65"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="max-w-2xl">
+      <span class="section-label">Meet the Team</span>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-brand leading-tight mt-2 mb-6">
+        Our<br><span class="text-gold italic">Exceptional Team</span>
+      </h1>
+      <p class="text-stone-600 text-lg md:text-xl leading-relaxed">
+        Dedicated, compassionate and truly reliable — the best family in care.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  FOUNDER SECTION
+============================================================ -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Our Founder</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2">Meet George</h2>
+      <p class="text-stone-500 mt-2">A Nurse by Nature, A Leader by Heart</p>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-12 items-start">
+
+      <!-- Photo -->
+      <div class="md:col-span-2">
+        <div class="relative overflow-hidden rounded-3xl shadow-soft">
+          <img src="images/dora-team/dora-george+thea+andrew1.jpg"
+               alt="George, Founder of Dora Health & Wellbeing, with family"
+               class="w-full object-cover object-top max-h-[560px]"
+               onerror="this.src='images/dora-team/dora-george+andrew wedding.jpg'">
+          <!-- Subtle illustration watermark -->
+          <img src="images/Dora-Illustrations/dora-art-lotus-freestanding.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-4 right-4 h-24 opacity-15 pointer-events-none select-none">
         </div>
+        <div class="mt-4 bg-warm rounded-2xl p-5 text-center">
+          <div class="font-serif text-xl text-brand font-semibold">George</div>
+          <div class="text-gold text-sm font-medium mt-0.5">Founder &amp; Director</div>
+          <div class="text-stone-400 text-xs mt-2 flex items-center justify-center gap-1">
+            <i class="fas fa-map-marker-alt"></i> Hocking, Perth WA
+          </div>
+        </div>
+      </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menumaker.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/sticky-header.js"></script>
+      <!-- Bio -->
+      <div class="md:col-span-3 space-y-4 text-stone-600 leading-relaxed">
+        <p>Even from a young age, George's path seemed clear. As a toddler, barely two or three years old, she was already embracing the role — playfully donning a nurse's outfit and earning the affectionate nickname <em>"Nurse Georgina."</em> This early inclination foreshadowed a lifelong passion for caring for others.</p>
+
+        <p>For many years, George honed her skills working with private clients requiring specialist care and high levels of support. She quickly discovered a natural aptitude for this demanding field. <em>"Being a nurse for a patient with paraplegia and then quadriplegia — I've got the knack for it, or so I'm told,"</em> she shares, highlighting her unique ability to connect with and effectively care for those with complex needs.</p>
+
+        <p>In 2023, George and her husband made the significant move from England to Perth, Western Australia, with their newborn daughter, Thea. The decision was rooted in a desire for Thea to grow up close to family. They instantly fell in love with Perth, settling north of the river.</p>
+
+        <p>It was shortly after their move that George identified a critical gap in Perth's healthcare landscape. <em>"A client I had specialist care for pointed out the gap here in Perth. WA has this gap in the market where you can't get a good, decent, reliable, helpful support worker — you are lucky to get one with experience at all!"</em></p>
+
+        <p>Driven by this observation and her profound commitment to quality care, George founded DORA Healthcare — named after her daughter, Theadora, symbolising the personal heart and soul poured into its mission.</p>
+
+        <div class="bg-warm rounded-2xl p-6 border-l-4 border-gold">
+          <blockquote class="font-serif text-lg text-brand italic">
+            "I am lucky to be both happy and successful with my career. DORA has got the best healthcare workers I can find in Perth — myself included."
+          </blockquote>
+          <div class="mt-2 text-sm text-gold font-medium">— George, Founder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+  TEAM GRID
+============================================================ -->
+<section class="py-20 bg-warm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Our People</span>
+      <h2 class="font-serif text-3xl md:text-4xl text-brand mt-2">The DORA Family</h2>
+      <p class="text-stone-500 mt-2 max-w-lg mx-auto text-sm">Every member of our team is hand-picked for their compassion, clinical expertise and commitment to our core values.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Real team photo -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group">
+        <div class="overflow-hidden h-64 relative">
+          <img src="images/dora-team/dora-george+andrew wedding.jpg"
+               alt="George and Andrew from DORA"
+               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <img src="images/Dora-Illustrations/dora-art-nurse.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-0 right-0 h-20 opacity-15 pointer-events-none select-none">
+        </div>
+        </div>
+        <div class="p-5">
+          <div class="font-serif text-lg text-brand font-semibold">Support Worker</div>
+          <div class="text-gold text-sm">In-Home Support Specialist</div>
+          <p class="text-stone-500 text-xs mt-2 leading-relaxed">Providing compassionate daily living support with professionalism and warmth.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group">
+        <div class="overflow-hidden h-64 relative">
+          <img src="images/dora-team/george and thea tempo.jpg"
+               alt="George and Thea, Dora Health & Wellbeing"
+               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+               onerror="this.src='images/dora-team/dora-george+thea+andrew1.jpg'">
+          <img src="images/Dora-Illustrations/dora-art-lotus-freestanding.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-0 right-0 h-20 opacity-15 pointer-events-none select-none">
+        </div>
+        </div>
+        <div class="p-5">
+          <div class="font-serif text-lg text-brand font-semibold">Care Coordinator</div>
+          <div class="text-gold text-sm">Client Relations &amp; Planning</div>
+          <p class="text-stone-500 text-xs mt-2 leading-relaxed">Ensuring every care plan is tailored, thoughtful and exceeds expectations.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group">
+        <div class="overflow-hidden h-64 relative">
+          <img src="images/dora-team/dora-george+karl.jpg"
+               alt="DORA team member"
+               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <img src="images/Dora-Illustrations/dora mental health vector.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-0 right-0 h-20 opacity-15 pointer-events-none select-none">
+        </div>
+        </div>
+        <div class="p-5">
+          <div class="font-serif text-lg text-brand font-semibold">Clinical Support</div>
+          <div class="text-gold text-sm">Spinal &amp; Complex Care</div>
+          <p class="text-stone-500 text-xs mt-2 leading-relaxed">Specialist expertise in complex and high-needs disability support.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group">
+        <div class="overflow-hidden h-64 relative">
+          <img src="images/dora-team/team 4thea andrew and george .png"
+               alt="George, Thea and Andrew"
+               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          <img src="images/Dora-Illustrations/dora-art-man-wheelchair-1.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-0 right-0 h-20 opacity-15 pointer-events-none select-none">
+        </div>
+        </div>
+        <div class="p-5">
+          <div class="font-serif text-lg text-brand font-semibold">Andrew</div>
+          <div class="text-gold text-sm">Support Worker</div>
+          <p class="text-stone-500 text-xs mt-2 leading-relaxed">A dedicated member of the DORA family committed to client independence and wellbeing.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lg transition-shadow group">
+        <div class="overflow-hidden h-64 relative">
+          <img src="images/dora-stock/dora-stock4.png"
+               alt="DORA support worker"
+               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+               onerror="this.src='images/dora-stock/dora-stock2.png'">
+          <img src="images/Dora-Illustrations/dora-art-woman-walkingframe.png"
+               alt="" aria-hidden="true"
+               class="absolute bottom-0 right-0 h-20 opacity-15 pointer-events-none select-none">
+        </div>
+        </div>
+        <div class="p-5">
+          <div class="font-serif text-lg text-brand font-semibold">Wellness Support</div>
+          <div class="text-gold text-sm">Personal Care &amp; Wellbeing</div>
+          <p class="text-stone-500 text-xs mt-2 leading-relaxed">Delivering personal care with warmth, respect and genuine connection.</p>
+        </div>
+      </div>
+
+      <!-- Join the team card -->
+      <div class="bg-brand rounded-2xl overflow-hidden shadow-soft p-8 flex flex-col justify-center items-center text-center">
+        <i class="fas fa-user-plus text-gold text-4xl mb-4"></i>
+        <div class="font-serif text-xl text-white mb-2">Join Our Team</div>
+        <p class="text-stone-300 text-sm leading-relaxed mb-5">Are you a compassionate care professional? We'd love to hear from you.</p>
+        <a href="contact.html" class="btn-gold text-sm">Get in Touch</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 pattern-bg relative overflow-hidden">
+  <div class="absolute inset-0 bg-brand/90"></div>
+  <div class="relative max-w-3xl mx-auto px-4 text-center">
+    <h2 class="font-serif text-3xl md:text-4xl text-white mb-4">Ready to Get in Touch?</h2>
+    <p class="text-stone-300 text-lg mb-8">Reach out to the Dora team to discuss how we can support your care needs or answer any questions.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="contact.html"   class="btn-gold">Contact Us</a>
+      <a href="tel:0438335050" class="btn-white">Call: 0438 335 050</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-stone-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-3 gap-10 mb-12">
+      <div>
+        <img src="images/navbar-logo.png" alt="DORA" class="h-12 mb-4 opacity-80">
+        <p class="text-sm leading-relaxed">Perth's In-Home Care Specialists.<br>Compassionate. Dignified. Personalised.</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-gold mt-1"></i> 22B Chesterfield Avenue, Hocking WA</li>
+          <li class="flex items-center gap-2"><i class="fas fa-phone text-gold"></i> <a href="tel:0438335050" class="footer-link">0438 335 050</a></li>
+          <li class="flex items-center gap-2"><i class="fas fa-envelope text-gold"></i> <a href="mailto:info@dorahealth.com.au" class="footer-link">info@dorahealth.com.au</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold uppercase text-xs tracking-widest mb-4">Follow Us</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-facebook text-gold w-4"></i> Facebook</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-instagram text-gold w-4"></i> Instagram</a></li>
+          <li><a href="#" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-linkedin text-gold w-4"></i> LinkedIn</a></li>
+          <li><a href="https://maps.app.goo.gl/9Zp7y2n5u9vP9XqZA" target="_blank" class="footer-link flex items-center gap-2 hover:text-gold"><i class="fab fa-google text-gold w-4"></i> Google My Business</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-stone-700 pt-6 text-center text-xs text-stone-500">
+      &copy; 2025 DORA Health &amp; Wellbeing. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+</script>
 </body>
-
 </html>

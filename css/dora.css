@@ -1,0 +1,242 @@
+/* =============================================
+   DORA Health & Wellbeing – Custom Brand CSS
+   (Works alongside Tailwind CDN)
+   ============================================= */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ---- Brand Tokens ---- */
+:root {
+  --gold:    #aa9144;
+  --gold-dk: #8e7424;
+  --dark:    #1e1c18;
+  --warm:    #f4f1ec;
+  --beige:   #eddba5;
+  --text:    #3d3a34;
+  --muted:   #747474;
+}
+
+/* ---- Base ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+}
+
+/* ---- Brand Colours ---- */
+.text-gold   { color: var(--gold); }
+.bg-gold     { background-color: var(--gold); }
+.bg-warm     { background-color: var(--warm); }
+.bg-dark     { background-color: var(--dark); }
+.border-gold { border-color: var(--gold); }
+
+/* ---- Pattern Background ---- */
+.pattern-bg {
+  background-image: url('../images/dora-background.png');
+  background-repeat: repeat;
+  background-size: 350px;
+}
+
+/* ---- Navbar ---- */
+#navbar {
+  transition: box-shadow 0.3s, background 0.3s;
+}
+#navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+
+/* ---- Mobile Menu ---- */
+#mobile-menu { display: none; }
+#mobile-menu.open { display: block; }
+
+/* ---- Hero ---- */
+.hero-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ---- Lotus Animation ---- */
+@keyframes lotusPulse {
+  0%   { transform: scale(1);    filter: drop-shadow(0 0 0px rgba(170,145,68,0)); }
+  50%  { transform: scale(1.06); filter: drop-shadow(0 0 24px rgba(170,145,68,.4)); }
+  100% { transform: scale(1);    filter: drop-shadow(0 0 0px rgba(170,145,68,0)); }
+}
+.lotus-animated { animation: lotusPulse 4s ease-in-out infinite; }
+
+/* ---- Fade-In on scroll ---- */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+}
+.fade-up.delay-1 { animation-delay:.2s; }
+.fade-up.delay-2 { animation-delay:.4s; }
+.fade-up.delay-3 { animation-delay:.6s; }
+
+/* ---- Buttons ---- */
+.btn-gold {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background .25s, transform .2s;
+  text-decoration: none;
+}
+.btn-gold:hover { background: var(--gold-dk); transform: translateY(-2px); color:#fff; }
+
+.btn-outline-gold {
+  display: inline-block;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .25s;
+  text-decoration: none;
+}
+.btn-outline-gold:hover { background: var(--gold); color:#fff; }
+
+.btn-white {
+  display: inline-block;
+  background: #fff;
+  color: var(--gold);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .25s;
+  text-decoration: none;
+}
+.btn-white:hover { background: var(--gold); color:#fff; }
+
+/* ---- Service Cards (flip) ---- */
+.flip-card {
+  perspective: 1000px;
+  height: 320px;
+}
+.flip-card-inner {
+  width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .65s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute; inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flip-card-front {
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,.07);
+}
+.flip-card-back {
+  background: var(--beige);
+  transform: rotateY(180deg);
+}
+.flip-card-back h3 { color: var(--dark); margin-bottom:.75rem; font-size:1.1rem; }
+.flip-card-back p  { font-size:.85rem; line-height:1.6; color:var(--text); }
+
+/* ---- Testimonial Card ---- */
+.testimonial-card {
+  background: var(--warm);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  border-left: 4px solid var(--gold);
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: .2;
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+/* ---- Section Divider ---- */
+.section-label {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+
+/* ---- Stat Counter ---- */
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.stat-card .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-card .label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top:.5rem;
+}
+
+/* ---- Footer ---- */
+.footer-link { color: var(--muted); font-size: .9rem; line-height: 2; }
+.footer-link:hover { color: var(--gold); }
+
+/* ---- Image utilities ---- */
+.img-cover  { width:100%; height:100%; object-fit:cover; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+.shadow-soft { box-shadow: 0 8px 40px rgba(0,0,0,.1); }
+
+/* ---- Responsive Tweaks ---- */
+@media (max-width: 768px) {
+  .hero-section    { min-height: 75vh; }
+  .flip-card       { height: 360px; }
+}
+@media (max-width: 480px) {
+  .flip-card       { height: 400px; }
+}
